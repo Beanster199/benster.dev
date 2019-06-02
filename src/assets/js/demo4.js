@@ -23,7 +23,7 @@
     let animation = new explosion.default(
         'container', // id of DOM el
         {
-            surface: '111111',
+            surface: '424040',
             inside: '333333',
             background: '151616',
             onLoad: ()=>{

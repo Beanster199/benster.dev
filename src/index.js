@@ -2,12 +2,17 @@ const express = require('express')
 const app = express()
 const port = 3000
 const cheerio = require('cheerio')
+const path = require('path')
 
 app.use(express.static(__dirname + '/assets'))
 
 app.get('/', (req,res) => {
         let name = 'mariano'
         console.log(`mi nombre es ${name}`)
+});
+
+app.get('/test', (req,res) => {
+        res.sendFile(path.join(__dirname+'/assets/index-brain.html') )
 });
 
 app.post('/', async (req, res) => {
