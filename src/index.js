@@ -15,6 +15,10 @@ app.get('/test', (req,res) => {
         res.sendFile(path.join(__dirname+'/assets/index-brain.html') )
 });
 
+app.get('/projects', (req,res) => {
+   res.sendFile(path.join(__dirname+'/assets/projects.html') )
+});
+
 app.post('/', async (req, res) => {
     const _int = Math.floor(Math.random() * 59);
     const response = await fetch('http://www.commitstrip.com/en/page/' + _int + '/');
